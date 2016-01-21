@@ -16,7 +16,7 @@ void ReverseArray(char *array, size_t size)
 char* Addition(char* a, char* b)
 {
 	/* human-like addition for manipulating big integers incoming from fibonacci function */
-    char* result = malloc(100);
+    char* result = malloc(200000);
     int lenght = strlen(b); //b will always be the bigger number
     int overflow =0;
     int i;
@@ -70,8 +70,8 @@ char* Addition(char* a, char* b)
 
 void FibonacciPrnt()
 {
-    char* firstNumber = malloc(100);
-    char* secondNumber = malloc(100);
+    char* firstNumber = malloc(52000);
+    char* secondNumber = malloc(52000);
     char* result;
     if (firstNumber && secondNumber)
     {
@@ -79,8 +79,8 @@ void FibonacciPrnt()
         firstNumber[1] = '\0';
         secondNumber[0] = '1';
         secondNumber[1] = '\0';
-        int i; // i + 2 is fibonacci's number count ( i = 5 is 7th fibonacci number)
-        for(i = 1; i<= 498; i++)
+        int i; // i + 2 is fibonacci's number count ( i = 5 is 7th fibonacci number)s
+        for(i = 1; i<= 10528; i++)
         {
             result = Addition(firstNumber , secondNumber);
             firstNumber = secondNumber;
